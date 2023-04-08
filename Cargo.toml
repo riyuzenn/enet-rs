@@ -8,7 +8,6 @@ edition = "2021"
 [dependencies]
 enet-sys = "1.0.1"
 thiserror = "1.0.37"
-serde = "1.0.159"
 
 [dev-dependencies]
 anyhow = "1.0.65"
