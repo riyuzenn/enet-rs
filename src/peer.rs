@@ -3,6 +3,7 @@ use std::{
     marker::PhantomData,
     time::Duration,
 };
+use serde::{Serialize, Deserialize};
 
 use enet_sys::{
     enet_peer_disconnect, enet_peer_disconnect_later, enet_peer_disconnect_now, enet_peer_receive,
@@ -281,7 +282,7 @@ where
 /// primary way of storing owned references to Peers.
 ///
 /// When connecting to a host, both a reference to the peer, and its ID are returned.
-#[derive(Clone, Copy, Hash, PartialEq, Eq, Debug)]
+#[derive(Serialize, Deserialize, Clone, Copy, Hash, PartialEq, Eq, Debug)]
 pub struct PeerID {
     pub index: isize,
     pub generation: usize,
