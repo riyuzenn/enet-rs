@@ -283,8 +283,8 @@ where
 /// When connecting to a host, both a reference to the peer, and its ID are returned.
 #[derive(Clone, Copy, Hash, PartialEq, Eq, Debug)]
 pub struct PeerID {
-    pub(crate) index: isize,
-    pub(crate) generation: usize,
+    pub index: isize,
+    pub generation: usize,
 }
 
 /// Describes the state a `Peer` is in.
