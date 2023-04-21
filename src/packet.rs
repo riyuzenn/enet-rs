@@ -7,7 +7,7 @@ use enet_sys::{
 use crate::Error;
 
 /// A packet that can be sent or retrieved on an ENet-connection.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug)]
 pub struct Packet {
     inner: *mut ENetPacket,
 }
