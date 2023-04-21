@@ -43,7 +43,7 @@ struct PeerData<T> {
 ///
 /// Contains the received packet as well as the channel on which it was
 /// received.
-#[derive(Debug)]
+#[derive(Debug, Clone, Copy)]
 pub struct PeerPacket {
     /// The packet that was received.
     pub packet: Packet,
